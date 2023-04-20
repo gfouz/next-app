@@ -13,7 +13,9 @@ const column = css`
 
 interface IProps {
   width?: string;
+  height?: string;
   column?: boolean;
+  overflow?: string;
   children?: React.ReactNode;
   variants?: Variants | undefined;
 }
@@ -51,8 +53,10 @@ export default MotionOnScroll;
 const StyledBox = styled(motion.div).attrs({
   className: 'MotionOnScroll',
 })<IProps>`
-  width: ${(props) => props.width};
+  width: ${ (props) => props.width };
+  height: ${ (props) => props.height };
+  overflow: ${ props => props.overflow };
   display: flex;
   justify-content: center;
-  ${(props) => props.column && column};
+  ${ (props) => props.column && column };
 `;

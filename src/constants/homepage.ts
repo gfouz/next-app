@@ -35,6 +35,15 @@ export const reactVariant = {
   visible: { transition: { duration: 3 }, opacity: 1 },
   hidden: { opacity: 0 },
 };
+export const primaryPictureVariants = {
+  visible: {
+    transition: { duration: 5 },
+    x: "50px",
+  },
+  hidden: {
+    x: 0,
+  }
+};
 export const firstParagraphVariant = {
   visible: { transition: { duration: 3 }, opacity: 1 },
   hidden: { opacity: 0 },

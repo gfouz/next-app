@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import * as S from 'styles/about';
 import { useSnapshot } from 'valtio';
 import { useScroll, useMotionValueEvent } from 'framer-motion';
 
@@ -46,7 +47,7 @@ export default function About() {
     fetchPdf();
   };
   useEffect(() => {
-    position > 600 && position < 700 && setDegree(spin2);
+    position > 80 && position < 700 && setDegree(spin2);
     position > 700 && position < 800 && setDegree(spin3);
     position > 800 && position < 900 && setDegree(spin4);
     position > 900 && position < 1000 && setDegree(spin5);
@@ -55,23 +56,23 @@ export default function About() {
   return (
     <>
       <Sidebar options={Routes} />
-      <AboutContainer>
+      <S.AboutContainer>
         <NextHead title='about fouz Js portfolio' />
         <AboutHeader bg='#232323' color='#ffffff'>
           gfouz-{new Date().getFullYear()}
           <Button st={st} reverse={reverse} />
         </AboutHeader>
 
-        <AboutMain>
+        <S.AboutMain>
           <LayersContainer image='goldfish.jpg'></LayersContainer>
-          <SecondaryPictureContainer>
-            <SecondaryPicture />
-            <SecondaryArticle>
+          <S.SecondaryPictureContainer>
+            <S.SecondaryPicture />
+            <S.SecondaryArticle>
               <MotionOnScroll variants={reactVariant} column>
-                <PrimaryTitle>React JS</PrimaryTitle>
-                <PrimaryParagraph
+                <S.PrimaryTitle>React JS</S.PrimaryTitle>
+                <S.PrimaryParagraph
                   dangerouslySetInnerHTML={{ __html: about_react }}
-                ></PrimaryParagraph>
+                ></S.PrimaryParagraph>
               </MotionOnScroll>
               <OnScrollMotion column >
                 <SecondaryTitle>Express JS</SecondaryTitle>
@@ -79,12 +80,12 @@ export default function About() {
                   dangerouslySetInnerHTML={{ __html: about_express }}
                 ></SecondaryParagraph>
               </OnScrollMotion>
-            </SecondaryArticle>
-          </SecondaryPictureContainer>
-        </AboutMain>
+            </S.SecondaryArticle>
+          </S.SecondaryPictureContainer>
+        </S.AboutMain>
 
         <Aside bg='#efece7'>
-          <PictureContainer>
+          <S.PictureContainer>
             <AbsoluteContainer>
               <DownloadButton
                 transition={{ duration: 2.5, delay: 2 }}
@@ -113,26 +114,19 @@ export default function About() {
             >
               <SidebarPicture />
             </AnimatedBox>
-          </PictureContainer>
-          <ProfileCard>
+          </S.PictureContainer>
+          <S.ProfileCard>
             <Headline upper bolder>
               Overview
             </Headline>
             <p> {attached_1} </p>
-          </ProfileCard>
+          </S.ProfileCard>
 
-          <ProfileCard>
+          <S.ProfileCard>
             <SidebarAvatar />
             <p> {attached_2} </p>
-          </ProfileCard>
-          <ProfileCard>
-            <Headline upper bolder>
-              pki system
-            </Headline>
-            <Es6LiteralString dangerouslySetInnerHTML={{ __html: experience }} />
-          </ProfileCard>
-
-          <RemoteLinks>
+          </S.ProfileCard>
+          <S.RemoteLinks>
             <YoutubeLink>
               YouTube Channel
               <Youtube fontSize='30px' color='#c40550' />
@@ -141,14 +135,14 @@ export default function About() {
               Github Projects
               <GitAlt fontSize='30px' color='#222222' />
             </GithubLink>
-          </RemoteLinks>
-          <Cube3d spin={ degree } />
+          </S.RemoteLinks>
+
         </Aside>
 
         <Footer bg='#232323' color='#c2c5aa'>
           Portfolio &copy; {new Date().getFullYear()}
         </Footer>
-      </AboutContainer>
+      </S.AboutContainer>
     </>
   );
 }
@@ -198,7 +192,7 @@ const AboutContainer = styled.div`
     background-image: linear-gradient(90deg, #000046 0%, #1cb5e0 100%);
   }
 `;
-const AboutHeader = styled(Header)`
+const AboutHeader = styled( Header )`
   padding: 1.3em;
 `;
 const AboutMain = styled.main`
@@ -230,10 +224,10 @@ const PrimaryParagraph = styled.p`
   font-family: calibri;
   letter-spacing: 1.5px;
 `;
-const SecondaryParagraph = styled(PrimaryParagraph)`
+const SecondaryParagraph = styled( PrimaryParagraph )`
   color: #f1f1f1;
 `;
-const DownloadButton = styled(AnimatedButton)`
+const DownloadButton = styled( AnimatedButton )`
   color: #222222;
   width: 120px;
   height: 30px;
@@ -250,7 +244,7 @@ const DownloadButton = styled(AnimatedButton)`
   background-color: #f1f1f1;
   box-shadow: 1px 1px 10px #000000;
 `;
-const AnimatedBox = styled(AnimatedContainer)`
+const AnimatedBox = styled( AnimatedContainer )`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,6 +352,19 @@ const GithubLink = styled.a.attrs({ href: 'https://github.com/gfouz' })`
   justify-content: center;
   color: #444444;
   font-weight: bolder;
+`;
+const FixedContainer = styled.div`
+ position: fixed;
+ bottom: 3.5em;
+ width: 150px;
+ height: 150px;
+`;
+const AsideImage = styled.img.attrs({
+  alt:"asideImage"
+})`
+ width: 150px;
+ height: 150px;
+ object-fit: fill;
 `;
 
 // git config user.name gfouz

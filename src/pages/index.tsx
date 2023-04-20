@@ -1,4 +1,5 @@
 //import { useState } from "react";
+import * as S from 'styles/homepage';
 import styled from 'styled-components';
 
 import { Footer } from 'components/Footer';
@@ -7,7 +8,7 @@ import AllLinks, { SimpleNavbar } from 'components/SimpleNavbar';
 
 import NextHead from 'components/NextHead';
 import MotionOnScroll from 'components/MotionOnScroll';
-import { Paragraph, FramerMotionContainer } from 'components/FramerMotions';
+import { Paragraph, FramerMotionContainer, Picture } from 'components/FramerMotions';
 
 import Wxplorer from 'components/Wxplorer';
 import SpyGlass from 'icons/SpyGlass';
@@ -18,105 +19,82 @@ import { mainTitleVariants, finalVariant, navbarVariant } from 'constants/homepa
 import { firstParagraphVariant, secondParagraphVariant } from 'constants/homepage';
 import { attached_1, attached_2, attached_3, nodeJsLogoVariant } from 'constants/homepage';
 
+
 function Homepage() {
-  const isTablet = useMediaQuery('(max-width: 700px)');
+  const isMobile = useMediaQuery('(max-width: 700px)');
   return (
     <>
-      <HomepageContainer>
+      <S.HomepageContainer>
         <NextHead title='Fouz Portfolio made with Next Js' />
-        <LayersContainer image='gradient.jpg' center>
+        <LayersContainer image='black.jpg' center>
+
         </LayersContainer>
-        <MotionOnScroll variants={navbarVariant}>
-          <AutoNavbar>
+        <MotionOnScroll variants={ navbarVariant }>
+          <S.AutoNavbar>
             <Navbar>
               <AllLinks />
             </Navbar>
-          </AutoNavbar>
+          </S.AutoNavbar>
         </MotionOnScroll>
-        <PrimaryArticle>
-          <PictureContainer>
-            <PrimaryPicture />
-          </PictureContainer>
-          <ParagraphContainer>
+        <S.PrimaryArticle>
+          <S.PrimaryPictureContainer>
+           
+              <PrimaryPicture 
+                whileInView={{ opacity: 1, transition:{ duration: 2 } }}
+                initial={{ opacity: 0 }}
+              />
+         
+          </S.PrimaryPictureContainer>
+          <S.ParagraphContainer>
             <MotionOnScroll variants={firstParagraphVariant}>
-              <FirstParagraph>
+              <S.FirstParagraph>
                 {attached_1}
                 <a href='https://github.com/gfouz/best-practices.git Portfolio 2023'>
                   Portfolio react-vite-2023
                 </a>
-              </FirstParagraph>
+              </S.FirstParagraph>
             </MotionOnScroll>
-          </ParagraphContainer>
-        </PrimaryArticle>
+          </S.ParagraphContainer>
+        </S.PrimaryArticle>
 
-        <SecondaryArticle>
-          <ParagraphContainer>
+        <S.SecondaryArticle>
+          <S.ParagraphContainer>
             <MotionOnScroll variants={secondParagraphVariant}>
               <SecondParagraph>
                 {attached_2}
                 <a href='https://github.com/gfouz/pki-server-2023.git'>Pki-server-2023</a>
               </SecondParagraph>
             </MotionOnScroll>
-          </ParagraphContainer>
+          </S.ParagraphContainer>
           <LayersContainer image='school.jpg' halfSection centerBottom>
             <MotionOnScroll variants={nodeJsLogoVariant}>
               <NodeJsLogo />
             </MotionOnScroll>
           </LayersContainer>
-        </SecondaryArticle>
-        <LayersContainer image='coffeecup.png' center>
+        </S.SecondaryArticle>
+        <LayersContainer image='last.jpg' center>
           <MotionOnScroll variants={finalVariant}>
-            <ParagraphContainer>
-              <FinalParagraph>
+            <S.ParagraphContainer>
+              <S.FinalParagraph>
                 {attached_3}
                 <a href='https://github.com/gfouz/pki-server-2023.git'>Pki-server-2023</a>
-              </FinalParagraph>
-            </ParagraphContainer>
+              </S.FinalParagraph>
+            </S.ParagraphContainer>
           </MotionOnScroll>
         </LayersContainer>
-        <HomepageFooter>
+        <S.HomepageFooter>
           <SmallText>gfouz</SmallText>
           {<SpyGlass fontSize='15px' color='#f2f2f2' />}
           <SmallText>portfolio</SmallText>
           {new Date().getFullYear()}
-        </HomepageFooter>
-      </HomepageContainer>
+        </S.HomepageFooter>
+      </S.HomepageContainer>
     </>
   );
 }
 
 export default Homepage;
 
-const HomepageContainer = styled.div`
-  @font-face {
-    font-family: 'insomnia';
-    src: local('insomnia'), url('./fonts/insomnia.ttf') format('truetype');
-    font-weight: bolder;
-    font-display: block;
-  }
-  width: 100%;
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-`;
-const LogoContainer = styled.div`
-  position: absolute;
-  top: 2em;
-  left: 2em;
-`;
-const AutoNavbar = styled.div`
-  font-weight: bolder;
-  color: #f2f2f2;
-  letter-spacing: 2px;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  background-color: #14191f;
-  background-color: #0a0501;
-  justify-content: space-evenly;
-`;
 const Navbar = styled(SimpleNavbar)``;
 
 const PrimaryArticle = styled.article`
@@ -181,17 +159,19 @@ const MainTitle = styled.img.attrs({
   height: auto;
   margin: 1em 0;
 `;
-
-const PrimaryPicture = styled.img.attrs({
-  src: './images/freelancer.jpg',
+const PrimaryPictureContainer = styled.div`
+  width: 100%;
+  overflow: hidden;
+  @media (min-width: 750px) {
+    width: 50%;
+  }
+`;
+const PrimaryPicture = styled( Picture ).attrs({
+  src: './images/stone.jpg',
   alt: 'Primary',
 })`
-  max-width: 100%;
-  height: auto;
-  transition: transform 200ms ease-in;
-  &:hover {
-    transform: scale(1.2);
-  }
+  
+  transition: all 3s linear;
 `;
 
 const NodeJsLogo = styled.img.attrs({

@@ -7,6 +7,7 @@ interface IAsideProps {
 
 export const Aside = styled.aside<IAsideProps>`
   grid-area: aside;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
