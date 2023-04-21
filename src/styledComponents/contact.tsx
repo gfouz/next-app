@@ -26,7 +26,7 @@ export const ContactContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url('./images/prism.jpg');
+  background-image: url('./images/tulip.jpg');
 `;
 export const MainTitle = styled( Subtitle )`
   color: #ffffff;

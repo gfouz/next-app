@@ -49,8 +49,8 @@ function Homepage() {
             <MotionOnScroll variants={firstParagraphVariant}>
               <S.FirstParagraph>
                 {attached_1}
-                <a href='https://github.com/gfouz/best-practices.git Portfolio 2023'>
-                  Portfolio react-vite-2023
+                <a href='https://github.com/gfouz/next-app.git'>
+                  Portfolio-latest.
                 </a>
               </S.FirstParagraph>
             </MotionOnScroll>

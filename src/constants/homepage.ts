@@ -67,7 +67,7 @@ export const finalVariant = {
 export const attached_1 = `I am web developer focused on React Js and the most recently
 technologies related to this library such as NextJs, framer-motion,
 styled-components, chakra ui, zustand, valtio, react-router-dom,
-react-hook-forms, react-query and wonderful libraries made specially
+react-hook-form, react-query and wonderful libraries made specially
 for react by its own creators.`;
 
 export const attached_2 = `I am also focused on Express Js, and related libraries to afford
