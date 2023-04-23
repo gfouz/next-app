@@ -1,9 +1,7 @@
-import styled from 'styled-components';
-import { Subtitle } from 'components/FramerMotions';
-import { EmailInput } from 'components/EmailInput';
-import { errorMsg } from 'constants/contact';
-
-
+import styled from "styled-components";
+import { Subtitle } from "components/FramerMotions";
+import { EmailInput } from "components/EmailInput";
+import { errorMsg } from "constants/contact";
 
 export const ContactContainer = styled.div`
   display: flex;
@@ -26,9 +24,9 @@ export const ContactContainer = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url('./images/tulip.jpg');
+  background-image: url("./images/contact.jpg");
 `;
-export const MainTitle = styled( Subtitle )`
+export const MainTitle = styled(Subtitle)`
   color: #ffffff;
   margin-bottom: 1em;
 `;
@@ -66,12 +64,14 @@ export const TextInputContainer = styled.div`
     animation: 1s ${errorMsg};
   }
 `;
-export const InputLabel = styled.label.attrs((props) => ({ htmlFor: props.htmlFor }))`
+export const InputLabel = styled.label.attrs((props) => ({
+  htmlFor: props.htmlFor,
+}))`
   color: #ffffff;
   display: block;
   transition: 1s;
 `;
-export const ContactEmailInput = styled( EmailInput )`
+export const ContactEmailInput = styled(EmailInput)`
   padding: 1em;
   color: #ffffff;
   cursor: pointer;

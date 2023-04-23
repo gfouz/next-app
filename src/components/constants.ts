@@ -1,8 +1,8 @@
-import * as React from 'react';
-import axios from 'axios';
-import { keyframes } from 'styled-components';
+import * as React from "react";
+import axios from "axios";
+import { keyframes } from "styled-components";
 
-const BASE_URL = 'http://localhost:4000';
+const BASE_URL = "http://localhost:4000";
 //const BASE_URL = 'https://wonderful-pack.herokuapp.com';
 
 export const axiosApi = axios.create({
@@ -17,7 +17,10 @@ export interface IFormInput {
 }
 export async function postRequest(data: IFormInput): Promise<IFormInput | any> {
   try {
-    const res = await axios.post<IFormInput>('https://formspree.io/f/xdovlonj', data);
+    const res = await axios.post<IFormInput>(
+      "https://formspree.io/f/xdovlonj",
+      data
+    );
     const { data: result } = res;
     return result;
   } catch (error: any) {

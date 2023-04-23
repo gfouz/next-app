@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 const zoom = css`
   transition: transform 200ms ease-in;
@@ -94,7 +94,7 @@ const PictureContainer = styled.div<IProps>`
 `;
 const BackgroundImage = styled.img.attrs<IProps>((props) => ({
   src: `./images/${props.image}`,
-  alt: 'anyImage',
+  alt: "anyImage",
 }))<IProps>`
   max-width: 100%;
   height: auto;

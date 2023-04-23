@@ -1,4 +1,4 @@
-import styled, { Keyframes } from 'styled-components';
+import styled, { Keyframes } from "styled-components";
 
 interface IKeyframes {
   spin: Keyframes;
@@ -11,22 +11,22 @@ const Cube3d = (props: IKeyframes) => {
     <Wrap>
       <Cube spin={spin}>
         <Front>
-          <Image src='./images/pink.jpg' />
+          <Image src="./images/pink.jpg" />
         </Front>
         <Back>
-          <Image src='./images/pink.jpg' />
+          <Image src="./images/pink.jpg" />
         </Back>
         <Top>
-          <Image src='./images/pink.jpg' />
+          <Image src="./images/pink.jpg" />
         </Top>
         <Bottom>
-          <Image src='./images/pink.jpg' />
+          <Image src="./images/pink.jpg" />
         </Bottom>
         <Left>
-          <Image src='./images/pink.jpg' />
+          <Image src="./images/pink.jpg" />
         </Left>
         <Right>
-          <Image src='./images/pink.jpg' />
+          <Image src="./images/pink.jpg" />
         </Right>
       </Cube>
     </Wrap>
@@ -90,7 +90,7 @@ const Bottom = styled.div`
   transform: rotateX(90deg) translateY(50px);
   transform-origin: bottom;
 `;
-const Image = styled.img.attrs({ alt: '3DPicture' })`
+const Image = styled.img.attrs({ alt: "3DPicture" })`
   width: 100px;
   height: 100px;
   object-fit: cover;

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 interface ITypeWriter {
   p?: string;
@@ -18,7 +18,7 @@ export const TypeWriter = styled(motion.div)`
   font-weight: bolder;
   font-size: ${(props: ITypeWriter) => props.size};
   text-transform: uppercase;
-  text-align: ${(props: ITypeWriter) => props.align || 'center'};
+  text-align: ${(props: ITypeWriter) => props.align || "center"};
   padding: ${(props: ITypeWriter) => props.p};
   margin: ${(props: ITypeWriter) => props.m};
 
@@ -33,7 +33,7 @@ export const TypeWriter = styled(motion.div)`
     letter-spacing: 0.15em; /* Adjust as needed */
     animation: typing 2s steps(40, end);
     font-family: ${(props) => props.fontfam};
-    text-shadow: ${(props) => (props.shadow ? '10px 1px 10px #000000' : '')};
+    text-shadow: ${(props) => (props.shadow ? "10px 1px 10px #000000" : "")};
   }
 
   /* The typing effect */

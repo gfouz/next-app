@@ -1,12 +1,12 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import * as React from "react";
+import styled from "styled-components";
 
 interface IComponentProps {
   message: string;
 }
 
 function StatusHandler({ message }: IComponentProps) {
-  const [status, setStatus] = React.useState('');
+  const [status, setStatus] = React.useState("");
   React.useEffect(() => {
     setStatus(message);
   }, [message]);

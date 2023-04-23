@@ -1,8 +1,8 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { motion, useAnimation, Variants } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
+import React from "react";
+import styled, { css } from "styled-components";
+import { motion, useAnimation, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const column = css`
   flex-direction: column;
@@ -18,27 +18,26 @@ const boxVariant = {
   hidden: { opacity: 0, scale: 0 },
 };
 
-const OnScrollMotion = ( props: Iprops) => {
-
+const OnScrollMotion = (props: Iprops) => {
   const { children, variants, column } = props;
   const control = useAnimation();
   const [ref, inView] = useInView();
 
   useEffect(() => {
     if (inView) {
-      control.start('visible');
+      control.start("visible");
     } else {
-      control.start('hidden');
+      control.start("hidden");
     }
   }, [control, inView]);
 
   return (
     <StyledBox
-      className='box'
+      className="box"
       ref={ref}
       column={column}
       variants={variants || boxVariant}
-      initial='hidden'
+      initial="hidden"
       animate={control}
     >
       {children}

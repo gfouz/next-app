@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 interface IProps {
   color?: string;
@@ -29,15 +29,15 @@ export const Headline = styled.div<IProps>`
   ${(props) => (props.bottom ? bottom : normal)};
   color: ${(props) => props.color};
   margin-left: ${(props) => props.ml};
-  margin-top: ${(props) => (props.mt ? '1em' : '0')};
+  margin-top: ${(props) => (props.mt ? "1em" : "0")};
   margin: ${(props) => props.m};
   padding: ${(props) => props.p};
-  text-align: ${(props) => (props.center ? 'center' : 'left')};
+  text-align: ${(props) => (props.center ? "center" : "left")};
   font-size: ${(props) => props.size};
   letter-spacing: ${(props) => props.spacing};
   font-family: ${(props) => props.fontfam};
-  font-weight: ${(props) => (props.bolder ? 'bolder' : 'normal')};
-  font-style: ${(props) => (props.italic ? 'italic' : 'normal')};
-  text-transform: ${(props) => props.upper && 'uppercase'};
+  font-weight: ${(props) => (props.bolder ? "bolder" : "normal")};
+  font-style: ${(props) => (props.italic ? "italic" : "normal")};
+  text-transform: ${(props) => props.upper && "uppercase"};
   }
 `;

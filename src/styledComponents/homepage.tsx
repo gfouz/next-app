@@ -1,12 +1,16 @@
-import styled from 'styled-components';
-import { Footer } from 'components/Footer';
-import AllLinks, { SimpleNavbar } from 'components/SimpleNavbar';
-import { Paragraph, FramerMotionContainer, Picture } from 'components/FramerMotions';
+import styled from "styled-components";
+import { Footer } from "components/Footer";
+import AllLinks, { SimpleNavbar } from "components/SimpleNavbar";
+import {
+  Paragraph,
+  FramerMotionContainer,
+  Picture,
+} from "components/FramerMotions";
 
 export const HomepageContainer = styled.div`
   @font-face {
-    font-family: 'insomnia';
-    src: local('insomnia'), url('./fonts/insomnia.ttf') format('truetype');
+    font-family: "insomnia";
+    src: local("insomnia"), url("./fonts/insomnia.ttf") format("truetype");
     font-weight: bolder;
     font-display: block;
   }
@@ -30,7 +34,7 @@ export const AutoNavbar = styled.div`
   display: flex;
   align-items: center;
   background-color: #14191f;
-  background-color: #0a0501;
+  background-color: #000000;
   justify-content: space-evenly;
 `;
 export const Navbar = styled(SimpleNavbar)``;
@@ -47,7 +51,7 @@ export const SecondaryArticle = styled(PrimaryArticle)`
   }
 `;
 export const ParagraphContainer = styled.article.attrs({
-  className: 'ParagraphContainer',
+  className: "ParagraphContainer",
 })`
   display: flex;
   flex-direction: column;
@@ -93,8 +97,8 @@ export const MainTitleContainer = styled(FramerMotionContainer)`
   text-align: center;
 `;
 export const MainTitle = styled.img.attrs({
-  src: './images/fouz4.png',
-  alt: 'maintitle',
+  src: "./images/fouz4.png",
+  alt: "maintitle",
 })`
   width: 45%;
   height: auto;
@@ -108,16 +112,16 @@ export const PrimaryPictureContainer = styled.div`
     width: 50%;
   }
 `;
-export const PrimaryPicture = styled( Picture ).attrs({
-  src: './images/bluemount.jpg',
-  alt: 'Primary',
+export const PrimaryPicture = styled(Picture).attrs({
+  src: "./images/bluemount.jpg",
+  alt: "Primary",
 })`
   transition: all 3s linear;
 `;
 
 export const NodeJsLogo = styled.img.attrs({
-  src: './images/rednodejs.png',
-  alt: 'NodeJs',
+  src: "./images/rednodejs.png",
+  alt: "NodeJs",
 })`
   width: 300px;
   height: auto;

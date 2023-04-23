@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 interface ThemeInterface {
   colors: {
@@ -8,7 +8,7 @@ interface ThemeInterface {
 
 export const theme: ThemeInterface = {
   colors: {
-    primary: '#0070f3',
+    primary: "#0070f3",
   },
 };
 

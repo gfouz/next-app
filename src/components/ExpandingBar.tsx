@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { growing_height, growing_weights } from './constants';
+import styled from "styled-components";
+import { growing_height, growing_weights } from "./constants";
 
 const ExpandingBar = () => {
   return (

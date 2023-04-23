@@ -1,5 +1,5 @@
-import axios from 'axios';
-import { keyframes } from 'styled-components';
+import axios from "axios";
+import { keyframes } from "styled-components";
 
 export interface IFormInput {
   name: string;
@@ -8,7 +8,10 @@ export interface IFormInput {
 }
 export async function postRequest(data: IFormInput): Promise<IFormInput | any> {
   try {
-    const res = await axios.post<IFormInput>('https://formspree.io/f/xdovlonj', data);
+    const res = await axios.post<IFormInput>(
+      "https://formspree.io/f/xdovlonj",
+      data
+    );
     const { data: result } = res;
     return result;
   } catch (error: any) {

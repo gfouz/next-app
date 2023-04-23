@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Navbar from './Navbar';
-import { useSnapshot } from 'valtio';
-import { switcher } from './store';
-import { IRouteArray } from './constants';
+import styled from "styled-components";
+import Navbar from "./Navbar";
+import { useSnapshot } from "valtio";
+import { switcher } from "./store";
+import { IRouteArray } from "./constants";
 
 export default function Sidebar(props: IRouteArray) {
   const snap = useSnapshot(switcher);
@@ -10,7 +10,7 @@ export default function Sidebar(props: IRouteArray) {
 
   return (
     <StyledSidebar>
-      <div className={st ? 'opened' : 'closed'} onClick={setFalse}>
+      <div className={st ? "opened" : "closed"} onClick={setFalse}>
         <Navbar options={props.options} />
       </div>
     </StyledSidebar>

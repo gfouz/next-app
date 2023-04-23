@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface IButton {
   st: boolean;
@@ -9,9 +9,9 @@ const Button = ({ st, reverse }: IButton) => {
   return (
     <StyledButton>
       <button onClick={() => reverse()}>
-        <div className={st ? 'opened' : 'closed'}></div>
-        <div className={st ? 'opened' : 'closed'}></div>
-        <div className={st ? 'opened' : 'closed'}></div>
+        <div className={st ? "opened" : "closed"}></div>
+        <div className={st ? "opened" : "closed"}></div>
+        <div className={st ? "opened" : "closed"}></div>
       </button>
     </StyledButton>
   );

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import * as React from "react";
+import styled from "styled-components";
 
 interface IErrorWarning {
   p?: string;
@@ -26,13 +26,13 @@ export default ErrorWarning;
 const StyledErrorWarning = styled.div`
   width: 100%;
   max-width: 320px;
-  color: ${(props) => props.color || '#444444'};
+  color: ${(props) => props.color || "#444444"};
   font-weight: bolder;
   font-size: 10px;
   text-transform: uppercase;
-  text-align: ${(props: IErrorWarning) => props.align || 'center'};
+  text-align: ${(props: IErrorWarning) => props.align || "center"};
   padding: ${(props: IErrorWarning) => props.p};
-  margin: ${(props: IErrorWarning) => props.m || '0.2rem 0'};
+  margin: ${(props: IErrorWarning) => props.m || "0.2rem 0"};
 
   p {
     overflow: hidden;

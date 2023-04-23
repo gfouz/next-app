@@ -1,15 +1,15 @@
-import * as React from 'react';
-import styled from 'styled-components';
-import { useMutation } from 'react-query';
-import { useRouter } from 'next/router';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import * as React from "react";
+import styled from "styled-components";
+import { useMutation } from "react-query";
+import { useRouter } from "next/router";
+import { useForm, SubmitHandler } from "react-hook-form";
 
-import Home from 'icons/Home';
-import ErrorWarning from 'components/ErrorWarning';
-import { postRequest, IFormInput, errorMsg } from './constants';
-import { EmailInput } from 'components/EmailInput';
-import { Subtitle } from 'components/FramerMotions';
-import { SubmitButton } from 'components/SubmitButton';
+import Home from "icons/Home";
+import ErrorWarning from "components/ErrorWarning";
+import { postRequest, IFormInput, errorMsg } from "./constants";
+import { EmailInput } from "components/EmailInput";
+import { Subtitle } from "components/FramerMotions";
+import { SubmitButton } from "components/SubmitButton";
 
 function ContactForm() {
   const {
@@ -18,15 +18,15 @@ function ContactForm() {
     formState: { errors },
   } = useForm<IFormInput>();
 
-  const emailWarning = 'a valid email is required.';
-  const messageWarning = 'message must not be empty.';
+  const emailWarning = "a valid email is required.";
+  const messageWarning = "message must not be empty.";
 
   const [isOver, setIsOver] = React.useState(false);
 
   const router = useRouter();
 
   function handleButtonEvent() {
-    router.push('/');
+    router.push("/");
   }
 
   const response = useMutation((data: IFormInput) => postRequest(data));
@@ -43,55 +43,70 @@ function ContactForm() {
             handleButtonEvent();
           }}
         >
-          <Home fontSize='25px' color='#ffffff' />
+          <Home fontSize="25px" color="#ffffff" />
         </BackwardsButton>
         <EmailInputContainer>
           <MainTitle
             style={{
-              color: errors?.hasOwnProperty('email') ? '#ff0000' : '#ffffff',
-              transition: '1s',
+              color: errors?.hasOwnProperty("email") ? "#ff0000" : "#ffffff",
+              transition: "1s",
             }}
           >
             Contact Me
           </MainTitle>
-          <InputLabel htmlFor='email' className={isOver ? 'upwards' : 'normal'}>
+          <InputLabel htmlFor="email" className={isOver ? "upwards" : "normal"}>
             Your email
           </InputLabel>
           <ContactEmailInput
-            id='email'
+            id="email"
             onMouseEnter={() => {
               setIsOver(true);
             }}
             onMouseLeave={() => {
               setIsOver(false);
             }}
-            {...register('email', {
+            {...register("email", {
               required: true,
               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
             })}
           />
-          <ErrorWarning label='email' errors={errors} info={emailWarning} color='#ffffff' />
+          <ErrorWarning
+            label="email"
+            errors={errors}
+            info={emailWarning}
+            color="#ffffff"
+          />
         </EmailInputContainer>
         <TextInputContainer>
-          <InputLabel htmlFor='message' className={isOver ? 'upwards' : 'normal'}>
+          <InputLabel
+            htmlFor="message"
+            className={isOver ? "upwards" : "normal"}
+          >
             Your message
           </InputLabel>
           <TextArea
-            className={errors.hasOwnProperty('message') ? 'messageError' : undefined}
+            className={
+              errors.hasOwnProperty("message") ? "messageError" : undefined
+            }
             onMouseEnter={() => {
               setIsOver(true);
             }}
             onMouseLeave={() => {
               setIsOver(false);
             }}
-            {...register('message', {
+            {...register("message", {
               required: true,
             })}
           ></TextArea>
-          <ErrorWarning label='message' errors={errors} info={messageWarning} color='#ffffff' />
+          <ErrorWarning
+            label="message"
+            errors={errors}
+            info={messageWarning}
+            color="#ffffff"
+          />
         </TextInputContainer>
-        <SubmitButton className={isOver ? 'downwards' : 'upwards'}>
-          {isOver ? 'Hello' : 'Send'}
+        <SubmitButton className={isOver ? "downwards" : "upwards"}>
+          {isOver ? "Hello" : "Send"}
         </SubmitButton>
         {response?.data?.ok ? (
           <QueryStatus>message sent ok</QueryStatus>

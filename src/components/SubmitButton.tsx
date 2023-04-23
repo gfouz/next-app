@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 const jello = keyframes`
  0% {
@@ -25,7 +25,7 @@ const jello = keyframes`
 
 `;
 
-export const SubmitButton = styled.button.attrs({ type: 'submit' })`
+export const SubmitButton = styled.button.attrs({ type: "submit" })`
   border: none;
   border-radius: 10px;
   margin: 1em 0;

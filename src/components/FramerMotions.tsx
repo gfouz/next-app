@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
+import { motion } from "framer-motion";
+import styled from "styled-components";
 
 interface IHeadings {
   color?: string;
@@ -9,12 +9,12 @@ interface IHeadings {
 export const Span = styled(motion.span)<IHeadings>`
   color: ${(props) => props.color};
   width: ${(props) => props.width};
-  text-transform: ${(props) => props.uppercase && 'uppercase'};
+  text-transform: ${(props) => props.uppercase && "uppercase"};
 `;
 export const Subtitle = styled(motion.h1)<IHeadings>`
   color: ${(props) => props.color};
-  width: ${(props) => props.width || 'fit-content'};
-  text-transform: ${(props) => props.uppercase && 'uppercase'};
+  width: ${(props) => props.width || "fit-content"};
+  text-transform: ${(props) => props.uppercase && "uppercase"};
 `;
 export const Paragraph = styled(motion.p)``;
 export const FramerMotionContainer = styled(motion.div)``;

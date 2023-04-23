@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import ErrorWarning from './ErrorWarning';
-import { Path, UseFormRegister } from 'react-hook-form';
+import React from "react";
+import styled from "styled-components";
+import ErrorWarning from "./ErrorWarning";
+import { Path, UseFormRegister } from "react-hook-form";
 
 interface IFormInput {
   name: string;
@@ -35,7 +35,7 @@ const TextInput = ({
     <>
       <StyledInput
         id={id}
-        type='text'
+        type="text"
         defaultValue={defaultValue}
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}

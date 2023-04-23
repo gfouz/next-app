@@ -1,4 +1,4 @@
-import { proxy } from 'valtio';
+import { proxy } from "valtio";
 
 //sidebar or menu options state.
 interface IStateData {
@@ -6,7 +6,7 @@ interface IStateData {
   setOption: (option: string) => string;
 }
 const state: IStateData = proxy({
-  opt: 'homepage',
+  opt: "homepage",
   setOption: (option) => (state.opt = option),
 });
 

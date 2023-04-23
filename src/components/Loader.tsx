@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import { Headline } from './Headline';
+import styled from "styled-components";
+import { Headline } from "./Headline";
 
 const Spinner = () => {
   return (
     <SpinnerLayout>
       <SpinnerContainer>
-        <Headline upper color='#888888' m='1em 0'>
+        <Headline upper color="#888888" m="1em 0">
           Loading...
         </Headline>
         <LedSpinner>
-          <div className='lds-spinner'>
+          <div className="lds-spinner">
             <div></div>
             <div></div>
             <div></div>
@@ -62,7 +62,7 @@ const LedSpinner = styled.div`
     animation: lds-spinner 1.2s linear infinite;
   }
   .lds-spinner div:after {
-    content: ' ';
+    content: " ";
     display: block;
     position: absolute;
     top: 3.2px;

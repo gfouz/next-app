@@ -1,35 +1,48 @@
 //import { useState } from "react";
-import * as S from 'styles/homepage';
-import styled from 'styled-components';
+import * as S from "styles/homepage";
+import styled from "styled-components";
 
-import { Footer } from 'components/Footer';
-import LayersContainer from 'components/LayersContainer';
-import AllLinks, { SimpleNavbar } from 'components/SimpleNavbar';
+import { Footer } from "components/Footer";
+import LayersContainer from "components/LayersContainer";
+import AllLinks, { SimpleNavbar } from "components/SimpleNavbar";
 
-import NextHead from 'components/NextHead';
-import MotionOnScroll from 'components/MotionOnScroll';
-import { Paragraph, FramerMotionContainer, Picture } from 'components/FramerMotions';
+import NextHead from "components/NextHead";
+import MotionOnScroll from "components/MotionOnScroll";
+import {
+  Paragraph,
+  FramerMotionContainer,
+  Picture,
+} from "components/FramerMotions";
 
-import Wxplorer from 'components/Wxplorer';
-import SpyGlass from 'icons/SpyGlass';
+import Wxplorer from "components/Wxplorer";
+import SpyGlass from "icons/SpyGlass";
 
-import useMediaQuery from 'hooks/useMediaQuery';
+import useMediaQuery from "hooks/useMediaQuery";
 
-import { mainTitleVariants, finalVariant, navbarVariant } from 'constants/homepage';
-import { firstParagraphVariant, secondParagraphVariant } from 'constants/homepage';
-import { attached_1, attached_2, attached_3, nodeJsLogoVariant } from 'constants/homepage';
-
+import {
+  mainTitleVariants,
+  finalVariant,
+  navbarVariant,
+} from "constants/homepage";
+import {
+  firstParagraphVariant,
+  secondParagraphVariant,
+} from "constants/homepage";
+import {
+  attached_1,
+  attached_2,
+  attached_3,
+  nodeJsLogoVariant,
+} from "constants/homepage";
 
 function Homepage() {
-  const isMobile = useMediaQuery('(max-width: 700px)');
+  const isMobile = useMediaQuery("(max-width: 700px)");
   return (
     <>
       <S.HomepageContainer>
-        <NextHead title='Fouz Portfolio made with Next Js' />
-        <LayersContainer image='black.jpg' center>
-
-        </LayersContainer>
-        <MotionOnScroll variants={ navbarVariant }>
+        <NextHead title="Fouz Portfolio made with Next Js" />
+        <LayersContainer image="black.jpg" center></LayersContainer>
+        <MotionOnScroll variants={navbarVariant}>
           <S.AutoNavbar>
             <Navbar>
               <AllLinks />
@@ -38,18 +51,16 @@ function Homepage() {
         </MotionOnScroll>
         <S.PrimaryArticle>
           <S.PrimaryPictureContainer>
-           
-              <PrimaryPicture 
-                whileInView={{ opacity: 1, transition:{ duration: 2 } }}
-                initial={{ opacity: 0 }}
-              />
-         
+            <PrimaryPicture
+              whileInView={{ opacity: 1, transition: { duration: 2 } }}
+              initial={{ opacity: 0 }}
+            />
           </S.PrimaryPictureContainer>
           <S.ParagraphContainer>
             <MotionOnScroll variants={firstParagraphVariant}>
               <S.FirstParagraph>
                 {attached_1}
-                <a href='https://github.com/gfouz/next-app.git'>
+                <a href="https://github.com/gfouz/next-app.git">
                   Portfolio-latest.
                 </a>
               </S.FirstParagraph>
@@ -62,29 +73,33 @@ function Homepage() {
             <MotionOnScroll variants={secondParagraphVariant}>
               <SecondParagraph>
                 {attached_2}
-                <a href='https://github.com/gfouz/pki-server-2023.git'>Pki-server-2023</a>
+                <a href="https://github.com/gfouz/pki-server-2023.git">
+                  Pki-server-2023
+                </a>
               </SecondParagraph>
             </MotionOnScroll>
           </S.ParagraphContainer>
-          <LayersContainer image='school.jpg' halfSection centerBottom>
+          <LayersContainer image="school.jpg" halfSection centerBottom>
             <MotionOnScroll variants={nodeJsLogoVariant}>
               <NodeJsLogo />
             </MotionOnScroll>
           </LayersContainer>
         </S.SecondaryArticle>
-        <LayersContainer image='last.jpg' center>
+        <LayersContainer image="last.jpg" center>
           <MotionOnScroll variants={finalVariant}>
             <S.ParagraphContainer>
               <S.FinalParagraph>
                 {attached_3}
-                <a href='https://github.com/gfouz/pki-server-2023.git'>Pki-server-2023</a>
+                <a href="https://github.com/gfouz/pki-server-2023.git">
+                  Pki-server-2023
+                </a>
               </S.FinalParagraph>
             </S.ParagraphContainer>
           </MotionOnScroll>
         </LayersContainer>
         <S.HomepageFooter>
           <SmallText>gfouz</SmallText>
-          {<SpyGlass fontSize='15px' color='#f2f2f2' />}
+          {<SpyGlass fontSize="15px" color="#f2f2f2" />}
           <SmallText>portfolio</SmallText>
           {new Date().getFullYear()}
         </S.HomepageFooter>
@@ -109,7 +124,7 @@ const SecondaryArticle = styled(PrimaryArticle)`
   }
 `;
 const ParagraphContainer = styled.article.attrs({
-  className: 'ParagraphContainer',
+  className: "ParagraphContainer",
 })`
   display: flex;
   flex-direction: column;
@@ -152,8 +167,8 @@ const MainTitleContainer = styled(FramerMotionContainer)`
   text-align: center;
 `;
 const MainTitle = styled.img.attrs({
-  src: './images/fouz4.png',
-  alt: 'maintitle',
+  src: "./images/fouz4.png",
+  alt: "maintitle",
 })`
   width: 45%;
   height: auto;
@@ -166,17 +181,16 @@ const PrimaryPictureContainer = styled.div`
     width: 50%;
   }
 `;
-const PrimaryPicture = styled( Picture ).attrs({
-  src: './images/stone.jpg',
-  alt: 'Primary',
+const PrimaryPicture = styled(Picture).attrs({
+  src: "./images/stone.jpg",
+  alt: "Primary",
 })`
-  
   transition: all 3s linear;
 `;
 
 const NodeJsLogo = styled.img.attrs({
-  src: './images/rednodejs.png',
-  alt: 'NodeJs',
+  src: "./images/rednodejs.png",
+  alt: "NodeJs",
 })`
   width: 300px;
   height: auto;

@@ -7,7 +7,6 @@ interface IFooter {
 
 export const Footer = styled.footer`
   grid-area: footer;
-  width: 100%;
   padding: 1em;
   display: flex;
   justify-content: center;

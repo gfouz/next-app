@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { keyframes } from 'styled-components';
+import * as React from "react";
+import { keyframes } from "styled-components";
 
 export const spin1 = keyframes`
   from { transform: rotateY(0); }
@@ -26,12 +26,12 @@ export const spin6 = keyframes`
   to { transform: rotateY(-360deg); }
   `;
 export function fetchPdf() {
-  fetch('fouzsummary.pdf').then((response) => {
+  fetch("fouzsummary.pdf").then((response) => {
     response.blob().then((blob) => {
       const fileURL = window.URL.createObjectURL(blob);
-      let alink = document.createElement('a');
+      let alink = document.createElement("a");
       alink.href = fileURL;
-      alink.download = 'fouzsummary.pdf';
+      alink.download = "fouzsummary.pdf";
       alink.click();
     });
   });

@@ -1,5 +1,5 @@
-import * as React from 'react';
-import styled from 'styled-components';
+import * as React from "react";
+import styled from "styled-components";
 
 interface IAnchor {
   tip?: string;
@@ -22,5 +22,5 @@ const Anchor = styled.a<IAnchor>`
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.font};
   text-decoration: none;
-  text-transform: ${(props) => (props.uppercase ? 'uppercase' : 'normal')};
+  text-transform: ${(props) => (props.uppercase ? "uppercase" : "normal")};
 `;

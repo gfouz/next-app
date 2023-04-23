@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export interface IListProps {
   icon: React.ReactNode;
@@ -23,7 +23,7 @@ export const StyledNavbar = styled.div`
   width: 100%;
   background-color: ${(props: INavProps) => props.bg};
   margin: ${(props: INavProps) => props.margin};
-  padding: ${(props: INavProps) => props.padding || '1em 0'};
+  padding: ${(props: INavProps) => props.padding || "1em 0"};
 
   .nav {
     width: 100%;

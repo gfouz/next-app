@@ -1,32 +1,31 @@
-import styled from 'styled-components';
-import { Header } from 'components/Header';
-import { Footer } from 'components/Footer';
-import { AnimatedContainer, AnimatedButton } from 'components/FramerMotions';
-
+import styled from "styled-components";
+import { Header } from "components/Header";
+import { Footer } from "components/Footer";
+import { AnimatedContainer, AnimatedButton } from "components/FramerMotions";
 
 export const AboutContainer = styled.div`
   background-color: #1b1f22;
   @font-face {
-    font-family: 'insomnia';
-    src: local('insomnia'), url('./fonts/insomnia.ttf') format('truetype');
+    font-family: "insomnia";
+    src: local("insomnia"), url("./fonts/insomnia.ttf") format("truetype");
     font-weight: bolder;
     font-display: block;
   }
   display: grid;
   grid-template-areas:
-    'header'
-    'main'
-    'aside'
-    'footer';
+    "header"
+    "main"
+    "aside"
+    "footer";
   grid-template-columns: 1fr;
 
   @media (min-width: 750px) {
     & {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas:
-        'header  header  header'
-        'main    main    aside'
-        'footer  footer  footer';
+        "header  header  header"
+        "main    main    aside"
+        "footer  footer  footer";
     }
   }
   .red {
@@ -49,7 +48,7 @@ export const AboutContainer = styled.div`
     background-image: linear-gradient(90deg, #000046 0%, #1cb5e0 100%);
   }
 `;
-export const AboutHeader = styled( Header )`
+export const AboutHeader = styled(Header)`
   padding: 1.3em;
 `;
 export const AboutMain = styled.main`
@@ -70,8 +69,8 @@ export const PrimaryTitle = styled.h1`
     font-size: 1.5em;
   }
 `;
-export const SecondaryTitle = styled( PrimaryTitle )`
-  color: #ffffff;
+export const SecondaryTitle = styled(PrimaryTitle)`
+  color: #222222;
 `;
 export const PrimaryParagraph = styled.p`
   color: #444444;
@@ -81,10 +80,10 @@ export const PrimaryParagraph = styled.p`
   font-family: calibri;
   letter-spacing: 1.5px;
 `;
-export const SecondaryParagraph = styled( PrimaryParagraph )`
-  color: #f1f1f1;
+export const SecondaryParagraph = styled(PrimaryParagraph)`
+  color: #222222;
 `;
-export const DownloadButton = styled( AnimatedButton )`
+export const DownloadButton = styled(AnimatedButton)`
   color: #222222;
   width: 120px;
   height: 30px;
@@ -101,7 +100,7 @@ export const DownloadButton = styled( AnimatedButton )`
   background-color: #f1f1f1;
   box-shadow: 1px 1px 10px #000000;
 `;
-export const AnimatedBox = styled( AnimatedContainer )`
+export const AnimatedBox = styled(AnimatedContainer)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,9 +136,16 @@ export const AbsoluteContainer = styled.article`
   align-items: center;
   flex-direction: column;
 `;
-export const SecondaryArticle = styled( AbsoluteContainer )`
+export const SecondaryArticle = styled(AbsoluteContainer)`
   justify-content: space-evenly;
-`;
+`; 
+export const HalfHeightSection = styled.div`
+ width: 100%;
+ height: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+`
 export const SecondaryPictureContainer = styled.div`
   position: relative;
   width: 100%;
@@ -148,23 +154,23 @@ export const SecondaryPictureContainer = styled.div`
 `;
 
 export const SecondaryPicture = styled.img.attrs({
-  src: './images/grass.jpg',
-  alt: 'forReact',
+  src: "./images/cat.jpg",
+  alt: "forReact",
 })`
   max-width: 100%;
   height: auto;
 `;
 export const SidebarPicture = styled.img.attrs({
-  src: './images/greenwhite.jpg',
-  alt: 'laptop',
+  src: "./images/greenwhite.jpg",
+  alt: "laptop",
 })`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
 export const SidebarAvatar = styled.img.attrs({
-  src: './images/gfouz2.png',
-  alt: 'gfouz',
+  src: "./images/gfouz2.png",
+  alt: "gfouz",
 })`
   max-width: 100%;
   height: auto;
@@ -193,7 +199,7 @@ export const RemoteLinks = styled.div`
   background-color: #efece7;
 `;
 export const YoutubeLink = styled.a.attrs({
-  href: 'https://youtube.com/@giovanifouz5033',
+  href: "https://youtube.com/@giovanifouz5033",
 })`
   margin: 0 1em;
   display: flex;
@@ -202,7 +208,7 @@ export const YoutubeLink = styled.a.attrs({
   color: #444444;
   font-weight: bolder;
 `;
-export const GithubLink = styled.a.attrs({ href: 'https://github.com/gfouz' })`
+export const GithubLink = styled.a.attrs({ href: "https://github.com/gfouz" })`
   margin: 0 1em;
   display: flex;
   align-items: center;
@@ -211,18 +217,16 @@ export const GithubLink = styled.a.attrs({ href: 'https://github.com/gfouz' })`
   font-weight: bolder;
 `;
 export const FixedContainer = styled.div`
- position: fixed;
- bottom: 3.5em;
- width: 150px;
- height: 150px;
+  position: fixed;
+  bottom: 3.5em;
+  width: 150px;
+  height: 150px;
 `;
 export const AsideImage = styled.img.attrs({
-  alt:"asideImage"
+  alt: "asideImage",
 })`
- width: 150px;
- height: 150px;
- object-fit: fill;
+  width: 150px;
+  height: 150px;
+  object-fit: fill;
 `;
-export const AboutFooter = styled( Footer )`
-
-`;
+export const AboutFooter = styled(Footer)``;

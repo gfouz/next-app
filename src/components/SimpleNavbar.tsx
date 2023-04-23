@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import Link from 'next/link';
+import styled from "styled-components";
+import Link from "next/link";
 
 //const blogLink = "https://gfouz.github.io/next-blog-2023";
 
@@ -7,13 +7,13 @@ const AllLinks = () => {
   return (
     <>
       <ListItem>
-        <Link href='/about'>about</Link>
+        <Link href="/about">about</Link>
       </ListItem>
       <ListItem>
-        <Link href='/contact'>contact</Link>
+        <Link href="/contact">contact</Link>
       </ListItem>
       <ListItem>
-        <Link href='/curriculum'>curriculum</Link>
+        <Link href="/work">work</Link>
       </ListItem>
     </>
   );

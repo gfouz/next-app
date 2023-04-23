@@ -1,20 +1,22 @@
-import styled from 'styled-components';
-import { IRouteArray } from './constants';
-import { useRouter } from 'next/router';
+import styled from "styled-components";
+import { IRouteArray } from "./constants";
+import { useRouter } from "next/router";
 
 function Navbar(props: IRouteArray) {
   const router = useRouter();
-  const navlinks = props.options.filter((item) => item.path !== router.pathname);
+  const navlinks = props.options.filter(
+    (item) => item.path !== router.pathname
+  );
 
   return (
     <>
       <StyledNavbar>
-        <div className='nav'>
+        <div className="nav">
           {navlinks.map((item, index) => (
-            <ul className='nav__list' key={index}>
-              <li className='nav__item'>
-                <div className='nav__icon'>{item.icon}</div>
-                <div className='nav__link'>{item.link}</div>
+            <ul className="nav__list" key={index}>
+              <li className="nav__item">
+                <div className="nav__icon">{item.icon}</div>
+                <div className="nav__link">{item.link}</div>
               </li>
             </ul>
           ))}
