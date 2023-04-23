@@ -73,7 +73,7 @@ export const SecondaryTitle = styled(PrimaryTitle)`
   color: #222222;
 `;
 export const PrimaryParagraph = styled.p`
-  color: #444444;
+  color: #222222;
   font-weight: 550;
   max-width: 600px;
   text-align: justify;
@@ -81,7 +81,7 @@ export const PrimaryParagraph = styled.p`
   letter-spacing: 1.5px;
 `;
 export const SecondaryParagraph = styled(PrimaryParagraph)`
-  color: #222222;
+  color: #000000;
 `;
 export const DownloadButton = styled(AnimatedButton)`
   color: #222222;
@@ -140,6 +140,7 @@ export const SecondaryArticle = styled(AbsoluteContainer)`
   justify-content: space-evenly;
 `; 
 export const HalfHeightSection = styled.div`
+ padding: 2em;
  width: 100%;
  height: 50%;
  display: flex;

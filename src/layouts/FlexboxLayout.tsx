@@ -1,3 +1,4 @@
+import * as React from 'react';
 import styled from "styled-components";
 import { useSnapshot } from "valtio";
 import { switcher } from "components/store";
@@ -8,8 +9,11 @@ import { Header } from "components/Header";
 import { Footer } from "components/Footer";
 import { Routes } from "components/Routes";
 
+interface ILayoutProps {
+  children: React.ReactNode;
+}
 
-function FlexLayout({ children }) {
+function FlexLayout( { children }:ILayoutProps ) {
   const snap2 = useSnapshot(switcher);
   const { st, reverse } = snap2;
   return (

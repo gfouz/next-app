@@ -70,7 +70,7 @@ export default function About() {
         </S.AboutHeader>
 
         <S.AboutMain>
-          <LayersContainer image="sun.jpg"></LayersContainer>
+          <LayersContainer image="car.jpg"></LayersContainer>
           <S.SecondaryPictureContainer>
             <S.SecondaryPicture />
             <S.SecondaryArticle>
